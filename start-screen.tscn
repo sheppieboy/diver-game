@@ -1,3 +1,22 @@
 [gd_scene format=3 uid="uid://hnrkulj50680"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Start" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control/CenterContainer"]
+layout_mode = 2
