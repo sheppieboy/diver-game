@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://hnrkulj50680"]
+[gd_scene load_steps=2 format=3 uid="uid://hnrkulj50680"]
+
+[ext_resource type="Texture2D" uid="uid://bk5beb6ntocba" path="res://Assets/StartScreen.png" id="1_246xk"]
 
 [node name="Start" type="Node2D"]
 
@@ -12,6 +14,7 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("1_246xk")
 
 [node name="CenterContainer" type="CenterContainer" parent="Control"]
 layout_mode = 0
