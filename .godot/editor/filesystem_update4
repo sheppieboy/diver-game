@@ -5,3 +5,5 @@ res://Player.tscn
 res://world.tscn
 res://menu.gd
 res://player.gd
+res://world_background.tscn
+res://world_background.gd

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpnqm7l7wdpyt"]
+
+[ext_resource type="Script" path="res://world_background.gd" id="1_8iucf"]
+[ext_resource type="Texture2D" uid="uid://lt2qh7xix2ix" path="res://PNG/environment/background.png" id="1_jtgde"]
+[ext_resource type="Texture2D" uid="uid://ck5mis2xa16j7" path="res://PNG/environment/midground.png" id="2_cgbe2"]
+
+[node name="Background" type="ParallaxBackground"]
+script = ExtResource("1_8iucf")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Background" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(574, 322)
+scale = Vector2(3.94444, 2.53125)
+texture = ExtResource("1_jtgde")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+
+[node name="Midground" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(564, 324)
+texture = ExtResource("2_cgbe2")
