@@ -1,30 +1,42 @@
 extends Node2D
 
 class_name foreground
-var speed = -10
+var speed = -100
 
-@onready var ground_frame_1 =$"ground-frame-1/Sprite2D"
+@onready var ground_frame_1 = $"ground-frame-1/Sprite2D"
 @onready var ground_frame_2 = $"ground-frame-2/Sprite2D"
+@onready var ground_frame_3 = $"ground-frame-3/Sprite2D"
+@onready var ground_frame_4 = $"ground-frame-4/Sprite2D"
 
 func _ready():
-	#set starting positions for foreground
+	# Set starting positions for foreground
 	ground_frame_2.global_position.x = ground_frame_1.global_position.x + ground_frame_1.texture.get_width()
-	
+	ground_frame_3.global_position.x = ground_frame_2.global_position.x + ground_frame_2.texture.get_width()
+	ground_frame_4.global_position.x = ground_frame_3.global_position.x + ground_frame_3.texture.get_width()
+
 func _process(delta):
-	#movement of foreground
+	# Movement of foreground
 	ground_frame_1.global_position.x += speed * delta
 	ground_frame_2.global_position.x += speed * delta
-	
-	#find if a frame is moving out of frame and change position
-	
-	#if ground frame 1 is out of the screen, update it to the end of ground frame 2s position
-	if ground_frame_1.global_position.x < -ground_frame_1.texture.get_width():
-		ground_frame_1.global_position.x = ground_frame_2.global_position.x + ground_frame_2.texture.get_width()
-	
-	#if ground frame 2 is out of the screen, update it to the end of ground frame 1
-	if ground_frame_2.global_position.x < -ground_frame_2.texture.get_width():
-		ground_frame_2.global_position.x = ground_frame_1.global_position.x + ground_frame_1.texture.get_width()
-	
-	
-	
+	ground_frame_3.global_position.x += speed * delta
+	ground_frame_4.global_position.x += speed * delta
 
+	# Check if the leading edge of frame 1 is off-screen
+	if ground_frame_1.global_position.x + ground_frame_1.texture.get_width() < 0:
+		# Update the position of frame 1 to the trailing edge of frame 4
+		ground_frame_1.global_position.x = ground_frame_4.global_position.x + ground_frame_4.texture.get_width()
+
+	# Check if the leading edge of frame 2 is off-screen
+	if ground_frame_2.global_position.x + ground_frame_2.texture.get_width() < 0:
+		# Update the position of frame 2 to the trailing edge of frame 1
+		ground_frame_2.global_position.x = ground_frame_1.global_position.x + ground_frame_1.texture.get_width()
+
+	# Check if the leading edge of frame 3 is off-screen
+	if ground_frame_3.global_position.x + ground_frame_3.texture.get_width() < 0:
+		# Update the position of frame 3 to the trailing edge of frame 2
+		ground_frame_3.global_position.x = ground_frame_2.global_position.x + ground_frame_2.texture.get_width()
+
+	# Check if the leading edge of frame 4 is off-screen
+	if ground_frame_4.global_position.x + ground_frame_4.texture.get_width() < 0:
+		# Update the position of frame 4 to the trailing edge of frame 3
+		ground_frame_4.global_position.x = ground_frame_3.global_position.x + ground_frame_3.texture.get_width()
