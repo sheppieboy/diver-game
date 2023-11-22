@@ -1,7 +1,8 @@
-ParallaxLayer
-ParallaxBackground
 CollisionShape2D
 StaticBody2D
+ParallaxLayer
+TileMap
+ParallaxBackground
 AnimatedSprite2D
 Sprite2D
 CharacterBody2D
