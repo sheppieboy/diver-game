@@ -3,3 +3,5 @@ res://start-ui.gd
 res://menu.tscn
 res://Player.tscn
 res://world.tscn
+res://menu.gd
+res://player.gd
