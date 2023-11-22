@@ -11,10 +11,11 @@ config_version=5
 [application]
 
 config/name="mvp"
-run/main_scene="res://start-screen.tscn"
+run/main_scene="res://start.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
 [rendering]
 
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.301961, 0.301961, 0.301961, 1)

@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://hnrkulj50680"]
-
-[ext_resource type="Texture2D" uid="uid://bk5beb6ntocba" path="res://Assets/StartScreen.png" id="1_246xk"]
-
-[node name="Start" type="Node2D"]
-
-[node name="TextureRect" type="TextureRect" parent="."]
-texture = ExtResource("1_246xk")
