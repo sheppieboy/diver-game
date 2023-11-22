@@ -60,3 +60,5 @@ animation = &"idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_c8pnk")
+
+[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
