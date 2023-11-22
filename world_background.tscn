@@ -8,6 +8,7 @@
 size = Vector2(1864, 18)
 
 [node name="Background" type="ParallaxBackground"]
+follow_viewport_scale = 5.0
 script = ExtResource("1_8iucf")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
@@ -33,7 +34,7 @@ motion_mirroring = Vector2(900, 2.08165e-12)
 [node name="StaticBody2D" type="StaticBody2D" parent="ParallaxLayer3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxLayer3/StaticBody2D"]
-position = Vector2(1015, 648)
+position = Vector2(964, 650)
 shape = SubResource("RectangleShape2D_o1w4e")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="."]

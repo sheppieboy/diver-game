@@ -7,3 +7,5 @@ res://menu.gd
 res://player.gd
 res://world_background.tscn
 res://world_background.gd
+res://Fish.tscn
+res://fish.gd

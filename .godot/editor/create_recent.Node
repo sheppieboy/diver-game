@@ -1,13 +1,13 @@
 CollisionShape2D
-StaticBody2D
+AnimatedSprite2D
+CharacterBody2D
+Control
 ParallaxLayer
+StaticBody2D
 TileMap
 ParallaxBackground
-AnimatedSprite2D
 Sprite2D
-CharacterBody2D
 Button
 TextureRect
 TextureButton
-Control
 Node
