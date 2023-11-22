@@ -47,3 +47,4 @@ func _diver_hits_ground(body):
 	diver_hit_ground.emit()
 	
 	
+	

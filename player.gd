@@ -8,15 +8,24 @@ class_name Player
 
 @onready var diver = $AnimationPlayer
 
+var load_screen = false
+
 var terminal_velocity = 400
 
 func _ready():
 	velocity = Vector2(0,0)
+	diver.play("treadwater")
 
 #process to calculate movement of player
 func _physics_process(delta):
 	if Input.is_action_just_pressed("swim"):
+		load_screen = true
+		diver.play("swim")
 		swim()
+		
+	#waiting for player to press enter to start
+	if !load_screen:
+		return
 	
 	#gravity impacting velocity
 	velocity.y += gravity * delta
