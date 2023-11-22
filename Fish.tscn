@@ -42,7 +42,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c8pnk"]
-radius = 55.0
+radius = 110.164
 
 [node name="Fish" type="CharacterBody2D"]
 script = ExtResource("1_o76s8")
