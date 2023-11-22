@@ -12,13 +12,15 @@ var load_screen = false
 
 var terminal_velocity = 400
 
+var read_user_input = true
+
 func _ready():
 	velocity = Vector2(0,0)
 	diver.play("treadwater")
 
 #process to calculate movement of player
 func _physics_process(delta):
-	if Input.is_action_just_pressed("swim"):
+	if Input.is_action_just_pressed("swim") && read_user_input:
 		load_screen = true
 		diver.play("swim")
 		swim()
@@ -53,5 +55,10 @@ func rotate_diver():
 	elif velocity.y > 0 && rad_to_deg(rotation) <90:
 		rotation += rotation_speed * deg_to_rad(1)
 	
-
+#diver hits teh rgound and game over
+func hit_ground():
+	gravity = 0
+	velocity = Vector2(0,0)
+	diver.stop() #stop animation
+	read_user_input = false
 	

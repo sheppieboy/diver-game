@@ -45,6 +45,10 @@ func _process(delta):
 #custom signal to check when the diver hits the ground
 func _diver_hits_ground(body):
 	diver_hit_ground.emit()
+	stop_ground_moving()
+	(body as Player).hit_ground()
 	
+func stop_ground_moving():
+	speed = 0
 	
 	
