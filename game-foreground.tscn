@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://do4aon1sna3cf"]
+
+[ext_resource type="Texture2D" uid="uid://bwjw1uicyeoum" path="res://new-PNG/layers/foregound-merged.png" id="1_8i1to"]
+[ext_resource type="Script" path="res://game-foreground.gd" id="1_bl776"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wfn7"]
+size = Vector2(550, 20)
+
+[node name="Foreground" type="Node2D"]
+script = ExtResource("1_bl776")
+
+[node name="ground-frame-1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground-frame-1"]
+position = Vector2(298, 630)
+shape = SubResource("RectangleShape2D_4wfn7")
+
+[node name="Sprite2D" type="Sprite2D" parent="ground-frame-1"]
+position = Vector2(292, 546)
+scale = Vector2(1.15625, 1)
+texture = ExtResource("1_8i1to")
+
+[node name="ground-frame-2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground-frame-2"]
+position = Vector2(879, 630)
+shape = SubResource("RectangleShape2D_4wfn7")
+
+[node name="Sprite2D" type="Sprite2D" parent="ground-frame-2"]
+position = Vector2(876, 546)
+scale = Vector2(1.15625, 1)
+texture = ExtResource("1_8i1to")

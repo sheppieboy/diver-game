@@ -9,3 +9,6 @@ res://world_background.tscn
 res://world_background.gd
 res://Fish.tscn
 res://fish.gd
+res://test-menu.tscn
+res://game-foreground.tscn
+res://game-foreground.gd

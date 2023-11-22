@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://c12s5e32ayh0o"]
+
+[ext_resource type="Texture2D" uid="uid://lt2qh7xix2ix" path="res://PNG/environment/background.png" id="1_1i68u"]
+
+[node name="ParallaxBackground" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 0.7)
+
+[node name="Control" type="Control" parent="ParallaxBackground/ParallaxLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer/Control"]
+layout_mode = 1
+texture = ExtResource("1_1i68u")
+expand_mode = 1
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Button" type="Button" parent="ParallaxBackground/ParallaxLayer2"]
+offset_left = 478.0
+offset_top = 180.0
+offset_right = 596.0
+offset_bottom = 284.0
+text = "play"
