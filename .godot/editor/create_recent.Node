@@ -1,3 +1,6 @@
+NPCSpawner
+Timer
+Area2D
 AnimatedSprite2D
 Sprite2D
 CollisionShape2D
@@ -5,7 +8,6 @@ CharacterBody2D
 Node
 AnimationPlayer
 StaticBody2D
-Area2D
 Control
 ParallaxBackground
 Button

@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://5bvhhq1bnays"]
+[gd_scene load_steps=2 format=3 uid="uid://5bvhhq1bnays"]
 
-[node name="Node" type="Node"]
+[ext_resource type="Script" path="res://spawner.gd" id="1_3g44r"]
+
+[node name="NPCSpawner" type="Node"]
+script = ExtResource("1_3g44r")
+
+[node name="Timer" type="Timer" parent="."]
