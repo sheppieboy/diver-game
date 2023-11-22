@@ -1,11 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpnqm7l7wdpyt"]
+[gd_scene load_steps=3 format=3 uid="uid://bpnqm7l7wdpyt"]
 
 [ext_resource type="Script" path="res://world_background.gd" id="1_8iucf"]
 [ext_resource type="Texture2D" uid="uid://lt2qh7xix2ix" path="res://PNG/environment/background.png" id="1_jtgde"]
-[ext_resource type="Texture2D" uid="uid://ck5mis2xa16j7" path="res://PNG/environment/midground.png" id="2_cgbe2"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1w4e"]
-size = Vector2(1864, 18)
 
 [node name="Background" type="ParallaxBackground"]
 follow_viewport_scale = 5.0
@@ -18,30 +14,3 @@ motion_mirroring = Vector2(900, 2.08165e-12)
 position = Vector2(577, 321)
 scale = Vector2(3.98611, 2.52344)
 texture = ExtResource("1_jtgde")
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
-motion_scale = Vector2(0.7, 0.7)
-motion_mirroring = Vector2(900, 2.08165e-12)
-
-[node name="Midground" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(564, 325.5)
-scale = Vector2(1, 1.07227)
-texture = ExtResource("2_cgbe2")
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(900, 2.08165e-12)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="ParallaxLayer3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxLayer3/StaticBody2D"]
-position = Vector2(1015, 648)
-shape = SubResource("RectangleShape2D_o1w4e")
-
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(900, 2.08165e-12)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="ParallaxLayer4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxLayer4/StaticBody2D"]
-position = Vector2(938, 12)
-shape = SubResource("RectangleShape2D_o1w4e")
