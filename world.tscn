@@ -12,5 +12,4 @@ position = Vector2(458, 315)
 [node name="Player" parent="." instance=ExtResource("1_2v68r")]
 position = Vector2(58, 60)
 
-[node name="Node2D" parent="." instance=ExtResource("4_rdc5e")]
-position = Vector2(9, 5)
+[node name="Foreground" parent="." instance=ExtResource("4_rdc5e")]
