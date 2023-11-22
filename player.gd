@@ -3,7 +3,7 @@ extends CharacterBody2D
 class_name Player
 
 @export var gravity = 900
-@export var swim_force = 300
+@export var swim_force = -300
 @export var rotation_speed = 2
 
 @onready var diver = $AnimationPlayer
