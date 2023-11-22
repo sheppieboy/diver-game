@@ -52,3 +52,8 @@ shape = SubResource("RectangleShape2D_4wfn7")
 position = Vector2(876, 546)
 scale = Vector2(1.15625, 1)
 texture = ExtResource("1_8i1to")
+
+[connection signal="body_entered" from="ground-frame-1" to="." method="_diver_hits_ground"]
+[connection signal="body_entered" from="ground-frame-2" to="." method="_diver_hits_ground"]
+[connection signal="body_entered" from="ground-frame-3" to="." method="_diver_hits_ground"]
+[connection signal="body_entered" from="ground-frame-4" to="." method="_diver_hits_ground"]

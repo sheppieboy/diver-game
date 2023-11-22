@@ -1,7 +1,11 @@
 extends Node2D
 
 class_name foreground
+
+signal diver_hit_ground
+
 var speed = -100
+
 
 @onready var ground_frame_1 = $"ground-frame-1/Sprite2D"
 @onready var ground_frame_2 = $"ground-frame-2/Sprite2D"
@@ -40,3 +44,10 @@ func _process(delta):
 	if ground_frame_4.global_position.x + ground_frame_4.texture.get_width() < 0:
 		# Update the position of frame 4 to the trailing edge of frame 3
 		ground_frame_4.global_position.x = ground_frame_3.global_position.x + ground_frame_3.texture.get_width()
+
+
+#custom signal to check when the diver hits the ground
+func _diver_hits_ground(body):
+	
+	pass
+	
