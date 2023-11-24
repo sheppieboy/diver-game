@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://duow8jyo5g6sk"]
+
+[ext_resource type="Script" path="res://npc_spawner.gd" id="1_6mdc2"]
+
+[node name="NPCSpawner" type="Node"]
+script = ExtResource("1_6mdc2")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 2.0

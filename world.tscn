@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://w32fud1fnhxu" path="res://Player.tscn" id="1_2v68r"]
 [ext_resource type="PackedScene" uid="uid://bpnqm7l7wdpyt" path="res://world_background.tscn" id="2_06u8o"]
+[ext_resource type="PackedScene" uid="uid://duow8jyo5g6sk" path="res://npc_spawner.tscn" id="4_klshw"]
 [ext_resource type="PackedScene" uid="uid://do4aon1sna3cf" path="res://game-foreground.tscn" id="4_rdc5e"]
-[ext_resource type="Script" path="res://spawner.gd" id="4_xcsnt"]
 
 [node name="World" type="Node2D"]
 
@@ -14,5 +14,4 @@ position = Vector2(259, 311)
 
 [node name="Background" parent="." instance=ExtResource("2_06u8o")]
 
-[node name="NPCSpawner" type="Node" parent="."]
-script = ExtResource("4_xcsnt")
+[node name="NPCSpawner" parent="." instance=ExtResource("4_klshw")]
