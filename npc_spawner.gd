@@ -27,11 +27,19 @@ func spawn_npcs():
 	add_child(coin)
 	
 	
-	fish.position.x = 500
-	fish.position.y = 300
+	fish.position.x = 800
+	var random_number = randi() % (500 - 50 + 1) + 50
+	fish.position.y = random_number
 	
 	coin.position.x = fish.position.x
-	coin.position.y = fish.position.y+20
+	
+	var coin_diff = randi() % (50 - 20 + 1) + 20
+
+# 	If the randomly generated value is less than 0, make it negative
+	if randi() % 2 == 0:
+		coin_diff *= -1
+	
+	coin.position.y = fish.position.y +coin_diff
 	
 	fish.diver_entered.connect(on_diver_entered)
 	coin.diver_collected.connect(gold_collected)

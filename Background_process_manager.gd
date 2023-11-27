@@ -21,7 +21,7 @@ func game_over():
 	(foreground as Foreground).stop_ground_moving()
 	(diver as Player).hit_ground()
 	(npc_spawner as NPCSpawner).stop_spawning()
-
+	get_tree().change_scene_to_file("res://menu.tscn")
 	
 func collect_gold():
 	gold += 1
