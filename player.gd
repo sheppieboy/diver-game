@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 class_name Player
 
+signal started
+
 @export var gravity = 900
 @export var swim_force = -300
 @export var rotation_speed = 2
@@ -22,6 +24,7 @@ func _ready():
 func _physics_process(delta):
 	if Input.is_action_just_pressed("swim") && read_user_input:
 		load_screen = true
+		started.emit()
 		diver.play("swim")
 		swim()
 		

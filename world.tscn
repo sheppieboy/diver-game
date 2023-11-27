@@ -1,17 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbg4lp7870by5"]
+[gd_scene load_steps=6 format=3 uid="uid://bbg4lp7870by5"]
 
 [ext_resource type="PackedScene" uid="uid://w32fud1fnhxu" path="res://Player.tscn" id="1_2v68r"]
+[ext_resource type="PackedScene" uid="uid://ccms24so33c4k" path="res://background_process_manager.tscn" id="1_b1bbt"]
 [ext_resource type="PackedScene" uid="uid://bpnqm7l7wdpyt" path="res://world_background.tscn" id="2_06u8o"]
 [ext_resource type="PackedScene" uid="uid://duow8jyo5g6sk" path="res://npc_spawner.tscn" id="4_klshw"]
 [ext_resource type="PackedScene" uid="uid://do4aon1sna3cf" path="res://game-foreground.tscn" id="4_rdc5e"]
 
 [node name="World" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_2v68r")]
+[node name="Manager" parent="." instance=ExtResource("1_b1bbt")]
+
+[node name="Background" parent="Manager" instance=ExtResource("2_06u8o")]
+
+[node name="Foreground" parent="Manager" instance=ExtResource("4_rdc5e")]
+
+[node name="Player" parent="Manager" instance=ExtResource("1_2v68r")]
 position = Vector2(259, 311)
 
-[node name="Foreground" parent="." instance=ExtResource("4_rdc5e")]
-
-[node name="Background" parent="." instance=ExtResource("2_06u8o")]
-
-[node name="NPCSpawner" parent="." instance=ExtResource("4_klshw")]
+[node name="NPCSpawner" parent="Manager" instance=ExtResource("4_klshw")]

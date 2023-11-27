@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccms24so33c4k"]
+
+[ext_resource type="Script" path="res://Background_process_manager.gd" id="1_dy4ub"]
+
+[node name="Manager" type="Node"]
+script = ExtResource("1_dy4ub")

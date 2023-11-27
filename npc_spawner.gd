@@ -1,23 +1,22 @@
 extends Node
 
-class_name PipeSpawner
+class_name NPCSpawner
 
 signal diver_eaten
 
 var fish_scene = preload("res://Fish.tscn")
 
 @export var fish_speed = -150
-
 @onready var spawn_timer = $SpawnTimer
 
 func _ready():
-	spawn_timer.timeout.connect(spawn_pipe)
 	spawn_timer.start()
 
-func start_spawning_pipes():
-	pass
+func start_spawning_npcs():
+	spawn_timer.timeout.connect(spawn_npcs)
 	
-func spawn_pipe():
+	
+func spawn_npcs():
 	var fish = fish_scene.instantiate() as Fish
 	add_child(fish)
 	

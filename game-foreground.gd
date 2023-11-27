@@ -1,6 +1,6 @@
 extends Node2D
 
-class_name foreground
+class_name Foreground
 
 signal diver_hit_ground
 
