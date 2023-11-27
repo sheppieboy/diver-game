@@ -11,3 +11,6 @@ res://npc_spawner.gd
 res://game-foreground.gd
 res://player.gd
 res://background_process_manager.tscn
+res://Fish.gd
+res://Coin.tscn
+res://Coin.gd

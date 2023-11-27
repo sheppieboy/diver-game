@@ -15,7 +15,7 @@ func _on_started():
 func game_over():
 	(foreground as Foreground).stop_ground_moving()
 	(diver as Player).hit_ground()
-	(npc_spawner as NPCSpawner).stop()
+	(npc_spawner as NPCSpawner).stop_spawning()
 	
 	
 	
