@@ -1,5 +1,10 @@
-Label
 MarginContainer
+Container
+Button
+Panel
+TextureRect
+VBoxContainer
+Label
 CanvasLayer
 AnimationPlayer
 ColorRect
@@ -14,8 +19,6 @@ CharacterBody2D
 StaticBody2D
 Control
 ParallaxBackground
-Button
 ParallaxLayer
-TextureRect
 TileMap
 TextureButton
