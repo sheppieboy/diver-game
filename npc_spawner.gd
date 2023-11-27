@@ -3,6 +3,7 @@ extends Node
 class_name NPCSpawner
 
 signal diver_eaten
+signal got_gold
 
 var fish_scene = preload("res://Fish.tscn")
 var coin_scene = preload("res://Coin.tscn")
@@ -33,6 +34,7 @@ func spawn_npcs():
 	coin.position.y = fish.position.y+20
 	
 	fish.diver_entered.connect(on_diver_entered)
+	coin.diver_collected.connect(gold_collected)
 	
 	fish.set_speed(fish_speed)
 	coin.set_speed(coin_speed)
@@ -40,6 +42,9 @@ func spawn_npcs():
 func on_diver_entered():
 	diver_eaten.emit()
 	stop_spawning()
+
+func gold_collected():
+	got_gold.emit()
 	
 func stop_spawning():
 	spawn_timer.stop()

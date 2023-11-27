@@ -17,3 +17,5 @@ func _diver_entered(body):
 	diver_entered.emit()
 	
 
+func _on_screen_exited():
+	queue_free()

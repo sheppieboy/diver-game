@@ -13,5 +13,6 @@ func set_speed(new_speed):
 func _process(delta):
 	position.x += speed*delta
 
-func _diver_collect(body):
+func _diver_collected(body):
 	diver_collected.emit()
+	queue_free()
