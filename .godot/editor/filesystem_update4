@@ -14,3 +14,7 @@ res://background_process_manager.tscn
 res://Fish.gd
 res://Coin.tscn
 res://Coin.gd
+res://game_over_effect.tscn
+res://game_over_effect.gd
+res://display.tscn
+res://display.gd

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbg4lp7870by5"]
+[gd_scene load_steps=7 format=3 uid="uid://bbg4lp7870by5"]
 
 [ext_resource type="PackedScene" uid="uid://w32fud1fnhxu" path="res://Player.tscn" id="1_2v68r"]
 [ext_resource type="PackedScene" uid="uid://ccms24so33c4k" path="res://background_process_manager.tscn" id="1_b1bbt"]
 [ext_resource type="PackedScene" uid="uid://bpnqm7l7wdpyt" path="res://world_background.tscn" id="2_06u8o"]
 [ext_resource type="PackedScene" uid="uid://duow8jyo5g6sk" path="res://npc_spawner.tscn" id="4_klshw"]
 [ext_resource type="PackedScene" uid="uid://do4aon1sna3cf" path="res://game-foreground.tscn" id="4_rdc5e"]
+[ext_resource type="PackedScene" uid="uid://dqqnalvgiftoh" path="res://display.tscn" id="6_miu3n"]
 
 [node name="World" type="Node2D"]
 
@@ -18,3 +19,5 @@
 position = Vector2(259, 311)
 
 [node name="NPCSpawner" parent="Manager" instance=ExtResource("4_klshw")]
+
+[node name="CanvasLayer" parent="Manager" instance=ExtResource("6_miu3n")]

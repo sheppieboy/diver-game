@@ -3,7 +3,7 @@ extends Node
 @onready var diver = $Player
 @onready var npc_spawner = $NPCSpawner
 @onready var foreground = $Foreground
-
+@onready var display = $CanvasLayer as Display
 var gold = 0
 
 func _ready():
@@ -21,6 +21,8 @@ func game_over():
 	(foreground as Foreground).stop_ground_moving()
 	(diver as Player).hit_ground()
 	(npc_spawner as NPCSpawner).stop_spawning()
+
 	
 func collect_gold():
-	print("gold working")
+	gold += 1
+	display.update_label(gold)
