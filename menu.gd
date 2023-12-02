@@ -1,9 +1,11 @@
 extends Control
 
+var background_process_manager = preload("res://background_process_manager.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var game_manager = background_process_manager.instantiate() as Background_Manager
+	game_manager.load()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

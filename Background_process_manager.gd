@@ -1,5 +1,7 @@
 extends Node
 
+class_name Background_Manager
+
 @onready var diver = $Player
 @onready var npc_spawner = $NPCSpawner
 @onready var foreground = $Foreground
@@ -25,6 +27,7 @@ func game_over():
 	(diver as Player).hit_ground()
 	(npc_spawner as NPCSpawner).stop_spawning()
 	(display as Display).on_game_over()
+	save()
 	
 func collect_gold():
 	gold += 1
@@ -43,5 +46,12 @@ func save():
 #loads the game data
 func load():
 	var game_file = FileAccess.open(SAVE_FILE_PATH, FileAccess.READ)
+	if FileAccess.file_exists(SAVE_FILE_PATH) == true:
+		if not game_file.eof_reached():
+			#read the line in the JSON file
+			var read_line = JSON.parse_string(game_file.get_line())
+			if read_line:
+				#access dictionary with gold key and set the gold in the file
+				gold = read_line["gold"]
 
 

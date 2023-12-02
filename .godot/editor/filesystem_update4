@@ -1,2 +1,9 @@
 res://background_process_manager.tscn
 res://Background_process_manager.gd
+res://menu.gd
+res://menu.tscn
+res://world.tscn
+res://Player.tscn
+res://npc_spawner.tscn
+res://Coin.tscn
+res://display.tscn
