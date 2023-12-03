@@ -53,5 +53,6 @@ func load():
 			if read_line:
 				#access dictionary with gold key and set the gold in the file
 				gold = read_line["gold"]
+				return gold
 
 

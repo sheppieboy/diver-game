@@ -1,10 +1,10 @@
+Label
 MarginContainer
 Container
 Button
 Panel
 TextureRect
 VBoxContainer
-Label
 CanvasLayer
 AnimationPlayer
 ColorRect
